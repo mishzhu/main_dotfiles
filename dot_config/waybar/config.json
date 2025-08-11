@@ -1,0 +1,453 @@
+{
+
+/////////////////////////////////////
+//                                 //
+//    Custom Waybar Config file    //   
+//                                 //
+/////////////////////////////////////
+
+//---------------------------------//
+
+
+/////////////////////////////////////
+//      Position of the Waybar     //
+/////////////////////////////////////
+
+"position": "top",
+"layer": "top",
+
+
+/////////////////////////////////////
+//   What goes where on Waybar     //
+/////////////////////////////////////
+
+
+/////////    LEFT SIDE    ///////////
+
+"modules-left": [
+	"hyprland/workspaces",
+	"custom/ram",
+	"custom/cpu",
+	"custom/gpu",
+	"custom/ip",
+	"custom/pubip",
+	"battery"
+],
+
+
+/////////     MIDDLE    ////////////
+
+"modules-center": [
+	"clock"
+],
+
+
+/////////    RIGHT SIDE    ///////////
+
+"modules-right": [
+	"custom/storage",
+	"custom/brightness",
+	"custom/volume",
+	"custom/bluetooth",
+	"custom/power"
+],
+
+
+/////////////////////////////////////
+//           RAM Module            //
+/////////////////////////////////////
+
+/////   Calls to the module   ///////
+
+"custom/ram": {
+
+
+////   Sets the icon for RAM  ///////
+
+	"format": "󱤓 RAM {}%",
+	"format-alt":"󱤓 ",
+
+	
+///  What script it will execute ////
+
+	"exec": "~/.config/waybar/scripts/ram.sh",
+
+
+// Sets how fast updates  ///////////
+
+	"interval": 5
+
+
+//        End the Module  ///////////
+
+},
+
+
+/////////////////////////////////////
+//          CPU Module             //
+/////////////////////////////////////
+
+/////   Calls to the module   ///////
+
+"custom/cpu":{
+
+
+/////   Sets the icon for CPU   /////
+
+	"format": " CPU {}%",
+	"format-alt":" ",
+
+
+///  What script it will execute ////
+
+	"exec": "~/.config/waybar/scripts/cpu.sh",
+
+
+// Sets how fast updates  ///////////
+
+	"interval": 5
+
+
+//        End the Module  ///////////
+
+},
+
+
+/////////////////////////////////////
+//          GPU Module             //
+/////////////////////////////////////
+
+/////   Calls to the module   ///////
+
+"custom/gpu":{
+
+
+/////   Sets the icon for GPU   /////
+
+	"format": "󰞤 GPU {}%",
+	"format-alt":"󰞤 ",
+
+///  What script it will execute ////
+
+	"exec": "~/.config/waybar/scripts/gpu.sh",
+
+
+// Sets how fast updates  ///////////
+
+	"interval": 5
+
+
+//        End the Module  ///////////
+
+},
+
+
+/////////////////////////////////////
+//           IP Module             //
+/////////////////////////////////////
+
+/////   Calls to the module   ///////
+
+"custom/ip":{
+
+
+/////   Sets the icon for IP   /////
+
+        "format": "PRIV IP {}",
+	"format-alt": "PRIV IP ---.---.---.---",
+
+
+///  What script it will execute ////
+
+        "exec": "~/.config/waybar/scripts/ip.sh",
+
+
+// Sets how fast updates  ///////////
+
+        "interval": 10
+
+
+//        End the Module  ///////////
+
+},
+
+
+"custom/pubip":{
+	"format": "PUB IP {}",
+        "format-alt": "PUB IP ---.---.---.---",
+	"exec": "~/.config/waybar/scripts/pubip.sh",
+	"interval": 10
+},
+
+/////////////////////////////////////
+//      NETWORK SPEED Module       //
+/////////////////////////////////////
+
+/////   Calls to the module   ///////
+
+"custom/network":{
+
+
+///   Displays the Network Speed  ///
+
+        "format": "{}",
+
+
+///  What script it will execute ////
+
+        "exec": "~/.config/waybar/scripts/network.sh",
+
+
+// Sets how fast updates  ///////////
+
+        "interval": 2
+
+
+//        End the Module  ///////////
+
+},
+
+
+/////////////////////////////////////
+//         STORAGE Module          //
+/////////////////////////////////////
+
+/////   Calls to the module   ///////
+
+"custom/storage":{
+
+
+//  Sets the display for Storage  ///
+
+        "format": "{}",
+
+
+///  What script it will execute ////
+
+        "exec": "~/.config/waybar/scripts/storage.sh",
+
+
+// Sets how fast updates  ///////////
+
+        "interval": 30
+
+
+//        End the Module  ///////////
+
+},
+
+
+/////////////////////////////////////
+//       BRIGHTNESS Module         //
+/////////////////////////////////////
+
+/////   Calls to the module   ///////
+
+"custom/brightness":{
+
+
+// Sets the display for BRIGHTNESS //
+// Display will be similar to this //
+//         ███████     70%         //
+
+        "format": "󰃟 : {}",
+
+
+///  What script it will execute ////
+
+        "exec": "~/.config/waybar/scripts/brightness.sh",
+
+
+// Sets how fast updates  ///////////
+
+        "interval": 2,
+
+//   Drop down panel      ///////////
+
+	"on-click": "~/.config/waybar/scripts/panels/brightness-panel.sh", 
+
+//        End the Module  ///////////
+
+},
+
+
+/////////////////////////////////////
+//         VOLUME Module           //
+/////////////////////////////////////
+
+/////   Calls to the module   ///////
+
+"custom/volume":{
+
+
+// Sets the display for VOLUME     //
+// Display will be similar to this //
+//         ███████     70%         //
+
+        "format": "VOL: {}",
+
+
+///  What script it will execute ////
+
+        "exec": "~/.config/waybar/scripts/volume.sh",
+
+
+// Sets how fast updates  ///////////
+
+        "interval": 1, 
+
+
+//   Drop down panel      ///////////
+
+        "on-click": "~/.config/waybar/scripts/panels/volume-panel.sh"
+
+
+//        End the Module  ///////////
+
+
+},
+
+
+/////////////////////////////////////
+//        BLUETOOTH Module         //
+/////////////////////////////////////
+
+/////   Calls to the module   ///////
+
+"custom/bluetooth":{
+
+
+///  Sets the icon for BLUETOOTH  ///
+
+        "format": "󰂯",
+
+
+///  What script it will execute ////
+
+        "on-click": "~/.config/waybar/scripts/brightness.sh"
+
+
+//        End the Module  ///////////
+
+},
+
+
+/////////////////////////////////////
+//          POWER Module           //
+/////////////////////////////////////
+
+/////   Calls to the module   ///////
+
+"custom/power":{
+
+
+///   Sets the icon for POWER   ///
+
+        "format": "",
+
+
+///  What script it will execute ////
+
+        "on-click": "~/.config/waybar/scripts/power-menu.sh"
+
+
+//        End the Module  ///////////
+
+},
+
+/////////////////////////////////////
+//          CLOCK Module           //
+/////////////////////////////////////
+
+/////   Calls to the module   ///////
+
+"clock":{
+
+
+///   Sets the format for CLOCK   ///
+
+        "tooltip-format": "{calendar}",
+        "format-alt": "  {:%a, %d %b %Y}",
+        "format": "{:%I:%M %p}",
+//  Shows more details when hover  //
+
+	"tooltip": true,
+	"interval": 30
+//        End the Module  ///////////
+
+},
+
+
+/////////////////////////////////////
+//          BATTERY Module         //
+/////////////////////////////////////
+
+/////   Calls to the module   ///////
+
+"battery":{
+
+
+///   Sets the format for BATTERY ///
+
+        "format": "Battery: [{}] {}%",
+
+
+///  What script it will execute ////
+
+	"exec": "~/.config/waybar/scripts/battery.sh",
+
+
+// Sets how fast updates  ///////////
+
+	"interval": 10,
+
+
+//  Shows more details when hover  //
+
+        "tooltip": true
+
+
+//        End the Module  ///////////
+
+},
+
+
+/////////////////////////////////////
+//        WORKSPACES Module        //
+/////////////////////////////////////
+
+/////   Calls to the module   ///////
+
+"hyprland/workspaces":{
+
+
+//  Sets the format for workspaces //
+
+        "format": "{name}",
+
+
+// What happens when you click one //
+
+        "on-click": "activate",
+
+
+// What happen when you scroll     //
+
+	"on-scroll-up": "hyprctl dispatch workspace +1",
+	"on-scroll-down": "hyprctl dispatch workspace -1",
+
+
+// What happen when you scroll     //
+
+	"persistent-workspaces": {
+        	"HDMI-A-1": [1, 2, 3, 4, 5]
+	},
+
+
+//        End the Module  ///////////
+
+},
+
+
+/////////////////////////////////////
+}

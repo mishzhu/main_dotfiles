@@ -1,0 +1,157 @@
+
+*{
+  border: none;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 20px;
+  min-height: 0;
+}
+
+/* Main bar container */
+window#waybar {
+  background: #150f0c;  /* define #150f0c somewhere */
+  color: #798882;
+}
+
+/* Tooltip styling */
+tooltip {
+  background: #150f0c;
+  border-color: #150f0c;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+/* Common module styling */
+#hyprland-workspaces,
+
+#custom-ram{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#custom-cpu{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#custom-gpu{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#custom-ip{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#custom-network{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#custom-battery{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#custom-pubip{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#custom-storage{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#custom-brightness{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#custom-volume{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#custom-bluetooth{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#custom-power {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+#clock {
+  background: #150f0c;
+  border-radius: 8px;
+  border: 1px solid #150f0c;
+  font-weight: 600;
+  margin: 6px 8px;
+  padding: 4px 12px;
+}
+
+/* Specific tweaks */
+#workspaces {
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 3.5px 5px;
+}
+
+#workspaces button {
+  border-radius: 6px;
+  color: #C84B2A;
+  padding: 6px;
+  margin-right: 5px;
+}
+
+#workspaces button.active {
+  background: #943A47;
+  color: #798882;
+}
+
+#workspaces button.focused {
+  background: #adc3bb;
+  color: #798882;
+}
+
+#workspaces button.urgent {
+  background: #598D6C;
+  color: #798882;
+}
+
+#workspaces button:hover {
+  background: #150f0c;
+  color: #adc3bb;
+}
+
+/* CPU and RAM colors */
+#cpu, #ram {
+  color: #C84B2A;
+}
+
+/* Clock styling */
+#clock {
+  border-right: 0;
+  color: #DD9B65;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+/* Network styling */
+#network {
+  color: #926259;
+  margin-right: 10px;
+}
+
+/* Volume and brightness */
+#volume, #brightness {
+}
+
+/* Tray */
+#tray {
+  margin-right: 10px;
+  padding: 0 10px;
+}
+

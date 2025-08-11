@@ -1,0 +1,32 @@
+
+
+########################################
+
+[font]
+normal = { family = "GohuFont", style: "Regular"}
+size = 20
+
+########
+
+[colors.primary]
+background = "#FFF0BA"
+foreground = "#2E3440"
+
+
+#######
+
+
+[colors.normal]
+black = "#4C566A"
+red = "#BF616A"
+green = "#A3BE8C"
+yellow = "#986A44"
+blue = "#B5835A"
+magenta = "#B48EAD"
+cyan = "#C061CB"
+white = "#D8DEE9"
+
+[cursor]
+style = { shape = "Block", blinking: "On" }
+
+#########################################

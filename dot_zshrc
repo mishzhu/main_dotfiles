@@ -1,0 +1,82 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=99999
+SAVEHIST=1000
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/oldboy/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+
+########################
+#   Slows Text output  #
+########################
+
+slow() {
+	"$@" | while IFS= read -r line; do
+		echo"$line"
+		sleep 0.05
+	done
+}
+
+########################
+#      ALIASES         #
+########################
+
+### GRC ###
+
+alias nmap="grc nmap"
+alias ip="grc ip a"
+
+### Movement ###
+
+alias home="cd /home/oldboy"
+alias desk="cd /home/oldboy/Desktop"
+alias ls="ls -l"
+alias update-wallpaper="/home/oldboy/.config/waybar/scripts/apply-wallpaper.sh"
+alias img="kitty +kitten icat"
+alias apply-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+
+
+### STEAM ###
+
+alias steam="flatpak run com.valvesoftware.Steam"
+
+
+##########################
+#    ZSH SUGGESTIONS     #
+##########################
+
+# Set colour of the suggestion 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#888888'
+
+##########################
+#         PROMPT         #
+##########################
+
+PROMPT="[%n@%m] [%1~] $ "
+
+
+##################################################
+#               BOTTOM SOURCING                  #
+##################################################
+
+#  Source for ZSH auto suggesting 
+
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+
+#  Source for ZSH syntax highlighting 
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
+
+
+
+
+
+
+

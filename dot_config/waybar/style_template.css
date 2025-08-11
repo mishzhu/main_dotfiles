@@ -1,0 +1,157 @@
+
+*{
+  border: none;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 20px;
+  min-height: 0;
+}
+
+/* Main bar container */
+window#waybar {
+  background: @base;  /* define @base somewhere */
+  color: @color8;
+}
+
+/* Tooltip styling */
+tooltip {
+  background: @base;
+  border-color: @crust;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+/* Common module styling */
+#hyprland-workspaces,
+
+#custom-ram{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#custom-cpu{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#custom-gpu{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#custom-ip{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#custom-network{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#custom-battery{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#custom-pubip{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#custom-storage{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#custom-brightness{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#custom-volume{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#custom-bluetooth{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#custom-power {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+#clock {
+  background: @crust;
+  border-radius: 8px;
+  border: 1px solid @crust;
+  font-weight: 600;
+  margin: 6px 8px;
+  padding: 4px 12px;
+}
+
+/* Specific tweaks */
+#workspaces {
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 3.5px 5px;
+}
+
+#workspaces button {
+  border-radius: 6px;
+  color: @color9;
+  padding: 6px;
+  margin-right: 5px;
+}
+
+#workspaces button.active {
+  background: @color2;
+  color: @color8;
+}
+
+#workspaces button.focused {
+  background: @color7;
+  color: @color8;
+}
+
+#workspaces button.urgent {
+  background: @color4;
+  color: @color8;
+}
+
+#workspaces button:hover {
+  background: @crust;
+  color: @color7;
+}
+
+/* CPU and RAM colors */
+#cpu, #ram {
+  color: @color1;
+}
+
+/* Clock styling */
+#clock {
+  border-right: 0;
+  color: @color6;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+/* Network styling */
+#network {
+  color: @color3;
+  margin-right: 10px;
+}
+
+/* Volume and brightness */
+#volume, #brightness {
+}
+
+/* Tray */
+#tray {
+  margin-right: 10px;
+  padding: 0 10px;
+}
+

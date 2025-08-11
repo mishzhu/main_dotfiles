@@ -1,0 +1,210 @@
+# Scan Title
+regexp=Nmap scan report for (\S+)\s\(([^\)]+)\)
+colours=default,bold green, bold magenta
+-
+# up
+regexp=Host is (up)
+colours=default, bold green
+-
+# Failed to resolve
+regexp=Failed\sto\sresolve\s\"(\S+)\"
+colours=red,bold red
+-
+# Closed ports
+regexp=Not shown: (\d+)\s(closed|filtered)\sports
+colours=default,bright_red,red
+-
+# Titles
+regexp=^PORT.*$|^HOP.*
+colours=bold
+-
+# Ports
+regexp=^(\d+)\/(\w+)\s+(\w+)\s+(\S+)
+colours=default,bold green,magenta,cyan,bold yellow
+-
+# Ports Details
+regexp=^\|_?(.*)
+colours=bold green,default
+-
+# Trace
+regexp=^\d+\s+(\d+\.\d+\sms)[^0-9]*(\d+\.\d+\.\d+\.\d+)
+colours=default,green,magenta
+-
+# Network Distance:
+regexp=Network Distance:\s(\d+)
+colours=default,bold green
+
+
+==================================
+
+
+# Host Scan     
+regexp=\[host down\]
+colours=bold red
+
+=================
+
+# Discorvered Open Port 
+
+regexp=open port
+colours="\033[38;5;48m"
+
+=================
+
+# Nmap Scan Report 
+
+regexp=Nmap scan report for
+colours="\033[38;5;244m"
+
+=================
+
+# Warning 
+
+regexp=Warning
+colours=red
+
+================
+
+# TCP 
+
+regexp=tcp
+colours=blue
+
+=============
+
+# DNS 
+
+regexp=DNS
+colours=bold cyan
+
+===============
+
+# Running 
+regexp=Running
+colours="\033[38;5;204m"
+
+==============
+
+# Uptime 
+
+regexp=Uptime guess
+colours="\033[38;5;48m"
+
+==============
+
+# Mac Address 
+
+regexp=MAC Address
+colours="\033[38;5;204m"
+
+==============
+
+# OS details 
+
+regexp=OS details
+colours="\033[38;5;204m"
+
+==============
+
+# Running (OS)
+regexp=Running:
+colours="\033[38;5;204m"
+
+
+==============
+
+# Initiating
+regexp=Initiating
+colours="\033[38;5;131m"
+
+=============
+
+# Discovered
+
+regexp=Discovered
+colours=bold green
+
+=============
+
+# OS CPE 
+
+regexp=OS CPE
+colours="\033[38;5;204m"
+
+=============
+
+#Network Distance 
+
+regexp=Network Distance
+colours="\033[38;5;204m"
+
+=============
+
+# TCP Sequence Prediction
+
+regexp=TCP Sequence Prediction
+colours="\033[38;5;204m"
+
+=============
+
+# Version
+
+regexp=VERSION
+colours="\033[38;5;204m"
+
+================
+
+
+# Uptime Guess
+
+regexp=Uptime guess
+colours="\033[38;5;204m"
+
+==================
+
+# Service Info 
+
+regexp=Service Info
+colours="\033[38;5;204m"
+
+=======================
+
+# Nmap Done 
+
+regexp=Nmap done 
+colours="\033[38;5;204m"
+
+=======================
+
+# SYN 
+regexp=SYN
+colours="\033[38;5;204m"
+
+================
+
+# udp 
+regexp=udp 
+colours=bold cyan 
+
+================
+
+# PORT STATE SERVICE 
+regexp=^PORT\s+STATE\s+SERVICE$
+colours="\033[38;5;204m"
+
+====================
+
+# grey out start 
+
+regexp=Starting Nmap (.*)
+colours="\033[38;5;244m"
+
+=======================
+
+# ssh-hostkey
+
+regexp=ssh-hostkey
+colours="\033[38;5;204m"
+
+======================
+
